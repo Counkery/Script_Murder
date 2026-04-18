@@ -1,0 +1,35 @@
+server:
+  port: 8082
+
+spring:
+  profiles:
+    active: dev # 默认启动开发环境
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+# MyBatis Plus 配置 (通用)
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+
+# Knife4j 配置 (通用)
+knife4j:
+  enable: true
+  setting:
+    language: zh-CN
+
+# Sa-Token 配置 (通用)
+sa-token: 
+  token-name: satoken
+  timeout: 2592000
+  activity-timeout: -1
+  is-concurrent: true
+  is-share: false
+  token-style: uuid
+  is-log: false
